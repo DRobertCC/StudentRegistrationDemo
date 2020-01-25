@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="97fcde8c-f015-445b-8a5a-6b37b68ef740" activeEnvironment="Default" name="POST" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="ee4561d1-a853-4d05-837a-48ca7aa20e84" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://localhost:44344" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://localhost:44344</con:endpoint></con:endpoints><con:resource name="Studentretrive" path="/api/studentregistration" id="33da8ddb-f5f3-4d10-a551-8b5863f63d4b"><con:settings/><con:parameters/><con:method name="Studentretrive 1" id="a1a9fab6-00de-4357-9a0e-f3fcdee8076b" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>405</con:status><con:params/><con:element xmlns:stud="https://localhost/api/studentretrive">stud:Fault</con:element></con:representation><con:request name="POST" id="365d7828-c58d-4b1a-9944-0832dac5ce12" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44344</con:endpoint><con:request>{
+      "Name": "Dave",
+      "Age": 270,
+      "RegistrationNumber": "12347"
+   },
+   {
+      "Name": "Adam",
+      "Age": 25,
+      "RegistrationNumber": "12345"
+   },
+   {
+      "Name": "Dave",
+      "Age": 29,
+      "RegistrationNumber": "12345"
+   },
+   {
+      "Name": "Peter",
+      "Age": 26,
+      "RegistrationNumber": "12346"
+   },
+   {
+      "Name": "Dave",
+      "Age": 27,
+      "RegistrationNumber": "12347"
+   }</con:request><con:originalUri>https://localhost/api/studentretrive</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
