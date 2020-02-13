@@ -9,7 +9,6 @@ using StudentRegistrationDemo2.Models;
 
 namespace StudentRegistrationDemo2.Controllers
 {
-    // Controller to handle a POST request.
     public class StudentRegistrationController : ApiController
     {
         public StudentRegistrationReply registerStudent(Student studentToReg)

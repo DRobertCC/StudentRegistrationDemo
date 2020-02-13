@@ -5,7 +5,7 @@ using System.Web;
 
 namespace StudentRegistrationDemo2.Models
 {
-    public class StudentRegistrationReply // This class will be used to reply message to the client application as response.
+    public class StudentRegistrationReply
     {
         String name;
         public String Name

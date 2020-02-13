@@ -5,17 +5,17 @@ using System.Web;
 
 namespace StudentRegistrationDemo2.Models
 {
-    public class StudentRegistration // This is a singleton class, and it will hold the list of registered students including all the operations for GET, POST, PUT, and DELETE requests. 
+    public class StudentRegistration
     {
         List<Student> studentList;
-        static StudentRegistration stdregd = null; // Singleton part1
+        static StudentRegistration stdregd = null;
 
         private StudentRegistration()
         {
             studentList = new List<Student>();
         }
 
-        public static StudentRegistration getInstance() // Singleton part2
+        public static StudentRegistration getInstance()
         {
             if (stdregd == null)
             {
@@ -28,7 +28,7 @@ namespace StudentRegistrationDemo2.Models
             }
         }
 
-        public String Add(Student student) // POST
+        public String Add(Student student)
         {
             if (student == null)
             {
@@ -50,12 +50,12 @@ namespace StudentRegistrationDemo2.Models
             return "Student successfuly added";
         }
 
-        public List<Student> getAllStudent() // GET
+        public List<Student> getAllStudent()
         {
             return studentList;
         }
 
-        public String UpdateStudent(Student student) // PUT
+        public String UpdateStudent(Student student)
         {
             for (int i = 0; i < studentList.Count; i++)
             {
@@ -68,7 +68,7 @@ namespace StudentRegistrationDemo2.Models
                     }
                     else
                     {
-                        studentList[i] = student; // update with the new record
+                        studentList[i] = student;
                         return "Update successful";
                     }
                 }
@@ -76,14 +76,14 @@ namespace StudentRegistrationDemo2.Models
             return "Update un-successful";
         }
 
-        public String Remove(String registrationNumber) // DELETE 
+        public String Remove(String registrationNumber)
         {
             for (int i = 0; i < studentList.Count; i++)
             {
                 Student stdn = studentList.ElementAt(i);
                 if (stdn.RegistrationNumber.Equals(registrationNumber))
                 {
-                    studentList.RemoveAt(i);//update the new record
+                    studentList.RemoveAt(i);
                     return "Delete successful";
                 }
             }
@@ -91,7 +91,7 @@ namespace StudentRegistrationDemo2.Models
             return "Delete un-successful";
         }
 
-        public String RemoveAll() // DELETE
+        public String RemoveAll()
         {
             if (studentList.Count() > 0)
             {

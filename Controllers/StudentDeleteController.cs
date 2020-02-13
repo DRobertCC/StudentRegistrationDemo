@@ -11,14 +11,14 @@ namespace StudentRegistrationDemo2.Controllers
 {
     public class StudentDeleteController : ApiController
     {
-        [Route("student/remove/{regdNum}")] // Here, we are using Route to specifically mention the resource location.
+        [Route("student/remove/{regdNum}")]
         public String DeleteStudentRecord(String regdNum)
         {
             Console.WriteLine("In deleteStudentRecord");
             return StudentRegistration.getInstance().Remove(regdNum);
         }
 
-        [Route("student/removeall")] // Here, we are using another Route to specifically mention the resource location.
+        [Route("student/removeall")]
         public String DeleteAllStudentRecord()
         {
             Console.WriteLine("In deleteAllStudentRecord");

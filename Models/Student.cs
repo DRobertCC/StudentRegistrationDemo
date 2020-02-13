@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-// https://dzone.com/articles/step-by-step-how-to-develop-a-restful-web-service
+
 namespace StudentRegistrationDemo2.Models
 {
     public class Student : IEquatable<Student>
